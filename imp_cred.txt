@@ -1,0 +1,14 @@
+FRIENDLY NAME
+zoom video
+
+SID
+SKdb9ac9ce00155915515b0bba45c335ad
+
+KEY TYPE
+Master
+
+SECRET
+5HEV0pENX9RAvdxZqn8Otz6nKIXC8Kov
+
+https://video-conf-8400-dev.twil.io/blank
+https://video-conf-8400-dev.twil.io/video-token
