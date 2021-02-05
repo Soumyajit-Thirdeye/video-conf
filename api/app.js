@@ -8,6 +8,8 @@ var indexRouter = require("./routes/index");
 var testAPIRouter = require("./routes/testAPI")
 var loginRouter = require("./routes/login");
 var registerRouter = require("./routes/register");
+var roomIdRouter = require("./routes/roomId")
+
 var cors = require("cors");
 
 var app = express();
@@ -27,6 +29,7 @@ app.use("/", indexRouter);
 app.use("/testAPI", testAPIRouter);
 app.use("/user/login", loginRouter);
 app.use("/user/register", registerRouter);
+app.use("/user/getRoomId", roomIdRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

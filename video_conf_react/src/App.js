@@ -46,7 +46,7 @@ function App() {
   const [errorMessage, updateErrorMessage] = useState(null);
   const [token, setToken] = useState();
   const [name, setName] = useState("");
-  const [room, setRoom] = useState("room");
+  const [room, setRoom] = useState("");
   return (
     <Router>
       <div className="App">

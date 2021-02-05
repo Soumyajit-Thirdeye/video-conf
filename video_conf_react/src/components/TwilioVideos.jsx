@@ -75,6 +75,7 @@ class TwilioVideos extends Component {
         publication.unpublish();
         /*const elem = document.getElementById(participant.identity);
                 elem.parentNode.removeChild(elem);*/
+        console.log("Video stopped!")
       });
     } else {
       const { createLocalVideoTrack } = require("twilio-video");
@@ -87,6 +88,7 @@ class TwilioVideos extends Component {
         .then((publication) => {
           console.log("Successfully unmuted your video:", publication);
         });
+        console.log("new video created!");
     }
     this.setState({ video: !this.state.video });
   };

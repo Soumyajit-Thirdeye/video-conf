@@ -34,6 +34,7 @@ function LoginForm(props) {
             successMessage: "Login successful. Redirecting to home page..",
           }));
           localStorage.setItem(ACCESS_TOKEN_NAME, response.data.token);
+          localStorage.setItem("email", state.email);
           redirectToRoom();
           props.showError(null);
         } else if (response.status === 204) {
