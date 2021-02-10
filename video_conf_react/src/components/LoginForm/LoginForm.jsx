@@ -49,10 +49,6 @@ function LoginForm(props) {
         console.log(error);
       });
   };
-  const redirectToHome = () => {
-    props.updateTitle("Home");
-    props.history.push("/home");
-  };
   const redirectToRoom = () => {
     props.updateTitle("Room");
     props.history.push("/room");
