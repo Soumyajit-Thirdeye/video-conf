@@ -88,13 +88,17 @@ class TwilioVideos extends Component {
         .then((publication) => {
           console.log("Successfully unmuted your video:", publication);
         });
-        console.log("new video created!");
+      console.log("new video created!");
     }
     this.setState({ video: !this.state.video });
   };
-  handleMessage = () => {};
-  handleEndCall = () => {};
-  handleScreen = () => {};
+  handleMessage = () => { };
+  handleEndCall = () => {
+  
+  this.state.roomObj.disconnect();
+  window.location.reload();
+  };
+  handleScreen = () => { };
 
   changeCssVideos = (main) => {
     let widthMain = main.offsetWidth;
@@ -172,7 +176,7 @@ class TwilioVideos extends Component {
         room.on("participantDisconnected", removeParticipant);
       })
       .catch((e) => console.log(e));
-    return () => {};
+    return () => { };
   };
   componentDidMount() {
     this.connect();
@@ -209,8 +213,8 @@ class TwilioVideos extends Component {
               {this.state.screen === true ? (
                 <ScreenShareIcon />
               ) : (
-                <StopScreenShareIcon />
-              )}
+                  <StopScreenShareIcon />
+                )}
             </IconButton>
           ) : null}
 
@@ -251,8 +255,8 @@ class TwilioVideos extends Component {
                 </div>
               ))
             ) : (
-              <p>No message yet</p>
-            )}
+                <p>No message yet</p>
+              )}
           </Modal.Body>
           <Modal.Footer className="div-send-msg">
             <Input
