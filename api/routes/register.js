@@ -12,13 +12,13 @@ router.post("/", function (req, res, next) {
     var meetingId = uuidV4();
     values = [[firstName, lastName, email, password, meetingId]]
     console.log(values)
-    var sql = `SELECT * FROM testing WHERE email='${email}'`
+    var sql = `SELECT * FROM user_details_dev WHERE email='${email}'`
     conn.query(sql, (err, result) => {
       if (err) throw err;
       if (result.length > 0) {
         res.status(204).send("User already exist with this email ID");
       } else {
-        var sql = `INSERT INTO testing (first_name, last_name, email, password, roomId) VALUES ?`;
+        var sql = `INSERT INTO user_details_dev (first_name, last_name, email, password, roomId) VALUES ?`;
         conn.query(sql, [values], (err, result) => {
           if (err) {
             throw err;

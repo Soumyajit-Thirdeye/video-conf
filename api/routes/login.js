@@ -6,7 +6,7 @@ router.post("/", function (req, res, next) {
     console.log(req.body)
     email = req.body.email
     password = req.body.password
-    var sql = `SELECT * FROM testing where email='${email}'`
+    var sql = `SELECT * FROM user_details_dev where email='${email}'`
     // console.log(sql)
     conn.query(sql, (err, result) => {
     console.log("result length is " + result.length);
