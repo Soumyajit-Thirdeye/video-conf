@@ -71,7 +71,7 @@ h1 {
 }
 
 .app {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -136,8 +136,12 @@ button:hover {
 }
 
 .local-participant {
-  text-align: center;
+  text-align: center; 
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 45vw;
 }
 .remote-participants {
   display: flex;
@@ -150,6 +154,10 @@ button:hover {
   padding: 10px;
   border-radius: 6px;
   display: inline-block;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 45vw; */
   margin-right: 10px;
 }
 .participant:last-child {

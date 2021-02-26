@@ -8,8 +8,16 @@ const Lobby = ({
   handleSubmit,
   connecting,
 }) => {
+  const formStyle = {
+    display: "block",
+    textAlign: "center",
+    // display: inline-block;
+    marginLeft: "auto",
+    marginRight: "auto",
+    // textAlign: "left"
+}
   return (
-    <form style={{ marginTop: 15 }} onSubmit={handleSubmit}>
+    <form style={formStyle} onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
         <input
